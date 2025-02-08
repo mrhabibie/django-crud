@@ -15,40 +15,54 @@ Ensure your environment meets these requirements:
 
 1. Clone Django Simple CRUD project from [this repository](https://github.com/mrhabibie/django-crud.git) :
    - HTTPS
-     ```bash
-     git clone https://github.com/mrhabibie/django-crud.git
+     ```console
+     $ git clone https://github.com/mrhabibie/django-crud.git
      ```
    - SSH
-     ```bash
-     git clone git@github.com:mrhabibie/django-crud.git
+     ```console
+     $ git clone git@github.com:mrhabibie/django-crud.git
      ```
 2. If you're using Linux / macOS, create Python Virtual Environment :
-   ```bash
-   python3 -m venv django-crud-venv && source django-crud-venv/bin/activate
+   ```console
+   $ python3 -m venv django-crud-venv && source django-crud-venv/bin/activate
    ```
 3. Move to project directory :
-   ```bash
-   cd django-crud
+   ```console
+   $ cd django-crud
    ```
 4. Install all the required project libraries :
-   ```bash
-   pip install -r requirements.txt
+   ```console
+   $ pip install -r requirements.txt
    ```
-5. Create migrations :
-   ```bash
-   python3 manage.py makemigrations
+
+## 💾 Setup Database
+
+1. If you're using Linux / macOS, please update or create service file that located in `~/.pg_service.conf` or if you're using Windows that file is located at `%APPDATA%\postgresql\.pg_service.conf` :
+
    ```
-6. Running migrations :
-   ```bash
-   python3 manage.py migrate
+   [my_service]
+   host=localhost
+   user=postgres
+   dbname=fastprint
+   port=5432
    ```
+
+   Please change `host`, `user`, `dbname`, and `port` with yours and make sure you've created the database with name that same with `dbname` above.
 
 ## 🚀 Running the Application
 
-1. Make sure [Setup Environment](#-setup-environment) are done.
-2. To start the application locally :
-   ```bash
-   python3 manage.py runserver
+1. Make sure [Setup Environment](#-setup-environment) and [Setup Database](#-setup-database) are done.
+2. Create migrations :
+   ```console
+   $ python3 manage.py makemigrations
+   ```
+3. Running migrations :
+   ```console
+   $ python3 manage.py migrate
+   ```
+4. To start the application locally :
+   ```console
+   $ python3 manage.py runserver
    ```
    The application will be available at http://localhost:8000 (the port maybe different or changed if there's any other service already use port 8000, please see at console log).
 
