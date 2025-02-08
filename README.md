@@ -37,7 +37,7 @@ Ensure your environment meets these requirements:
 
 ## 💾 Setup Database
 
-1. If you're using Linux / macOS, please update or create service file that located in `~/.pg_service.conf` or if you're using Windows that file is located at `%APPDATA%\postgresql\.pg_service.conf` :
+1. If you're using Linux / macOS, please update or create service file that located at `~/.pg_service.conf` or if you're using Windows that file is located at `%APPDATA%\postgresql\.pg_service.conf` :
 
    ```
    [my_service]
