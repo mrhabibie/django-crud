@@ -1,0 +1,51 @@
+{% extends 'myapp/template.html' %}
+
+{% load currency_filters %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-tools">
+                    <a href="{% url 'produk_create' %}" class="btn btn-primary">Tambah</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 10px; text-align: right;">No.</th>
+                            <th>Kategori Produk</th>
+                            <th>Nama Produk</th>
+                            <th style="width: 150px; text-align: right;">Harga</th>
+                            <th style="text-align: center;">Status</th>
+                            <th style="width: 150px; text-align: center;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in data %}
+                        <tr class="align-middle">
+                            <td style="text-align: right;">{{ forloop.counter }}.</td>
+                            <td>{{ item.kategori.nama_kategori }}</td>
+                            <td>{{ item.nama_produk }}</td>
+                            <td style="text-align: right;">{{ item.harga|currency }}</td>
+                            <td style="text-align: center;">{{ item.status.nama_status }}</td>
+                            <td style="text-align: center;">
+                                <a href="{% url 'produk_edit' item.id_produk %}">Edit</a> | <a href="{% url 'produk_delete' item.id_produk %}" onclick="return confirm('Yakin ingin menghapus produk ini?')">Hapus</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr class="align-middle">
+                            <td colspan="6">Tidak ada produk</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
