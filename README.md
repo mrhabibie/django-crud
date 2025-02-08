@@ -15,23 +15,23 @@ Ensure your environment meets these requirements:
 
 1. Clone Django Simple CRUD project from [this repository](https://github.com/mrhabibie/django-crud.git) :
    - HTTPS
-     ```console
+     ```sh
      git clone https://github.com/mrhabibie/django-crud.git
      ```
    - SSH
-     ```console
+     ```sh
      git clone git@github.com:mrhabibie/django-crud.git
      ```
 2. If you're using Linux / macOS, create Python Virtual Environment :
-   ```console
+   ```sh
    python3 -m venv django-crud-venv && source django-crud-venv/bin/activate
    ```
 3. Move to project directory :
-   ```console
+   ```sh
    cd django-crud
    ```
 4. Install all the required project libraries :
-   ```console
+   ```sh
    pip install -r requirements.txt
    ```
 
@@ -53,15 +53,15 @@ Ensure your environment meets these requirements:
 
 1. Make sure [Setup Environment](#-setup-environment) and [Setup Database](#-setup-database) are done.
 2. Create migrations :
-   ```console
+   ```sh
    python3 manage.py makemigrations
    ```
 3. Running migrations :
-   ```console
+   ```sh
    python3 manage.py migrate
    ```
 4. To start the application locally :
-   ```console
+   ```sh
    python3 manage.py runserver
    ```
    The application will be available at http://localhost:8000 (the port maybe different or changed if there's any other service already use port 8000, please see at console log).
