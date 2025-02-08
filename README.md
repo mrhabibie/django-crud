@@ -6,9 +6,10 @@ This guide will walk you through the setup and deployment of a Django Simple CRU
 
 Ensure your environment meets these requirements:
 
-| Component | Required Version | Installation Link                                 |
-| --------- | ---------------- | ------------------------------------------------- |
-| Python    | latest           | [Installation](https://www.python.org/downloads/) |
+| Component  | Required Version | Installation Link                                    |
+| ---------- | ---------------- | ---------------------------------------------------- |
+| Python     | latest           | [Installation](https://www.python.org/downloads/)    |
+| PostgreSQL | latest           | [Installation](https://www.postgresql.org/download/) |
 
 ## 📝 Setup Environment
 
